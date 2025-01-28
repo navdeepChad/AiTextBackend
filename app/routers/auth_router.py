@@ -3,6 +3,7 @@ from fastapi import APIRouter, Response, Depends, Request, HTTPException, Form
 from app.services.auth_service import AuthenticationService, AuthScheme
 from app.services.jwt_handler import JWTHandler
 from app.services.session_service import SessionService
+from datetime import datetime, timedelta
 
 router = APIRouter()
 logger = logging.getLogger("auth_router")
@@ -34,11 +35,13 @@ def login(
         raise HTTPException(status_code=401, detail="Authentication failed")
 
     if x_authscheme == AuthScheme.COOKIE:
+        expires = datetime.utcnow() + timedelta(hours=1)
         response.set_cookie(
             key="session_id",
             value=auth_response["session_id"],
             httponly=True,
             secure=False,
+            expires=expires
         )
 
     return auth_response

@@ -21,7 +21,7 @@ LOGGING_CONFIG = {
         }
     },
     "root": {
-        "level": "INFO",
+        "level": "INFO", 
         "handlers": ["console", "file"],
     },
 }

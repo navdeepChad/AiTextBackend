@@ -1,3 +1,4 @@
+from fastapi import HTTPException
 from app.models.session import UserSessionInfo
 
 # In-memory session store

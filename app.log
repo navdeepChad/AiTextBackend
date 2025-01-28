@@ -1,1 +1,55 @@
 
+2025-01-28 18:43:32,371 - session_middleware - INFO - Session middleware invoked
+2025-01-28 18:43:32,372 - auth_router - INFO - Login endpoint hit
+2025-01-28 18:43:32,373 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-01-28 18:48:43,076 - session_middleware - INFO - Session middleware invoked
+2025-01-28 18:48:43,077 - auth_router - INFO - Login endpoint hit
+2025-01-28 18:48:43,077 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-01-28 18:48:50,105 - session_middleware - INFO - Session middleware invoked
+2025-01-28 18:48:50,105 - auth_router - INFO - Login endpoint hit
+2025-01-28 18:48:50,106 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-01-28 18:48:54,157 - session_middleware - INFO - Session middleware invoked
+2025-01-28 18:48:54,157 - auth_router - INFO - Protected endpoint hit
+2025-01-28 18:48:54,157 - auth_router - INFO - session verified successfully for user: test_user
+2025-01-28 18:48:58,591 - session_middleware - INFO - Session middleware invoked
+2025-01-28 18:48:58,592 - auth_router - INFO - Protected endpoint hit
+2025-01-28 18:48:58,592 - auth_router - WARNING - missing or invalid authorization header
+2025-01-28 18:49:05,203 - session_middleware - INFO - Session middleware invoked
+2025-01-28 18:49:05,203 - auth_router - INFO - Login endpoint hit
+2025-01-28 18:49:05,204 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-01-28 18:49:13,428 - session_middleware - INFO - Session middleware invoked
+2025-01-28 18:49:13,429 - auth_router - INFO - Protected endpoint hit
+2025-01-28 18:49:13,429 - auth_router - INFO - token verified successfully for user: test_user
+2025-01-28 18:49:16,703 - session_middleware - INFO - Session middleware invoked
+2025-01-28 18:49:16,703 - auth_router - INFO - Logout endpoint hit
+2025-01-28 18:49:16,703 - auth_router - INFO - session 7c8ed734-65ad-4ced-9ff8-bbd3fe402a0f logout
+2025-01-28 18:49:25,909 - session_middleware - INFO - Session middleware invoked
+2025-01-28 18:49:25,910 - auth_router - INFO - Protected endpoint hit
+2025-01-28 18:49:25,910 - auth_router - WARNING - session cookie missing
+2025-01-28 19:13:20,869 - session_middleware - INFO - Session middleware invoked
+2025-01-28 19:13:20,873 - auth_router - INFO - Login endpoint hit
+2025-01-28 19:13:20,877 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-01-28 19:13:57,995 - session_middleware - INFO - Session middleware invoked
+2025-01-28 19:13:58,001 - auth_router - INFO - Login endpoint hit
+2025-01-28 19:13:58,002 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-01-28 20:00:03,650 - session_middleware - INFO - Session middleware invoked
+2025-01-28 20:00:03,651 - auth_router - INFO - Login endpoint hit
+2025-01-28 20:00:03,651 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-01-28 20:00:18,505 - session_middleware - INFO - Session middleware invoked
+2025-01-28 20:00:18,506 - auth_router - INFO - Login endpoint hit
+2025-01-28 20:00:18,507 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-01-28 20:00:32,922 - session_middleware - INFO - Session middleware invoked
+2025-01-28 20:00:32,925 - auth_router - INFO - Protected endpoint hit
+2025-01-28 20:00:32,925 - auth_router - INFO - session verified successfully for user: test_user
+2025-01-28 20:00:35,959 - session_middleware - INFO - Session middleware invoked
+2025-01-28 20:00:35,960 - auth_router - INFO - Protected endpoint hit
+2025-01-28 20:00:35,960 - auth_router - INFO - session verified successfully for user: test_user
+2025-01-28 20:00:49,907 - session_middleware - INFO - Session middleware invoked
+2025-01-28 20:00:49,909 - auth_router - INFO - Protected endpoint hit
+2025-01-28 20:00:49,913 - auth_router - INFO - token verified successfully for user: test_user
+2025-01-28 20:00:52,390 - session_middleware - INFO - Session middleware invoked
+2025-01-28 20:00:52,391 - auth_router - INFO - Logout endpoint hit
+2025-01-28 20:00:52,391 - auth_router - INFO - session 4dfeb628-c69d-451b-b10b-8813807d1d12 logout
+2025-01-28 20:01:06,258 - session_middleware - INFO - Session middleware invoked
+2025-01-28 20:01:06,261 - auth_router - INFO - Protected endpoint hit
+2025-01-28 20:01:06,263 - auth_router - WARNING - session cookie missing

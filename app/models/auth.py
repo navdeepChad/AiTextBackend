@@ -1,11 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
 
-class LoginRequest(BaseModel):
-    username: str
-    password: str
-    scheme: str
-
 class JWTToken(BaseModel):
     token: str
 

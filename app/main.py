@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from app.routers.auth_router import router as auth_router
 from app.middleware.session_middleware import session_middleware
-from app.config.logging_config import LOGGING_CONFIG 
+from app.config.logging_config import LOGGING_CONFIG
 import logging
 
 app = FastAPI()

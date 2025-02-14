@@ -1,8 +1,10 @@
 from pydantic import BaseModel
 from typing import Optional
 
+
 class JWTToken(BaseModel):
     token: str
+
 
 class AuthResponse(BaseModel):
     auth_scheme: str

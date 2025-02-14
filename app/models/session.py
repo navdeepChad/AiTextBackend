@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class UserSessionInfo(BaseModel):
     session_id: str
     user_id: str

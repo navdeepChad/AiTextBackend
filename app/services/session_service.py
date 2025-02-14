@@ -1,8 +1,12 @@
+__all__ = ["SessionService", "UserSessionInfo"]
+
+from typing import Any, Dict
 from fastapi import HTTPException
 from app.models.session import UserSessionInfo
 
 # In-memory session store
-session_store = {}
+session_store: Dict[str, Dict[str, Any]] = {}
+
 
 class SessionService:
     @staticmethod
@@ -20,7 +24,7 @@ class SessionService:
         return UserSessionInfo(**session_data)
 
     @staticmethod
-    def delete_session(session_id: str):
+    def delete_session(session_id: str) -> None:
         """Delete a session from the store."""
         if session_id in session_store:
             session_store.pop(session_id)

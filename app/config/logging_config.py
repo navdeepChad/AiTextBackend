@@ -5,9 +5,7 @@ LOGGING_CONFIG = {
     "version": 1,
     "disable_existing_loggers": False,
     "formatters": {
-        "default": {
-            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-        }
+        "default": {"format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"}
     },
     "handlers": {
         "console": {
@@ -17,11 +15,11 @@ LOGGING_CONFIG = {
         "file": {
             "class": "logging.FileHandler",
             "formatter": "default",
-            "filename": "app.log", 
-        }
+            "filename": "app.log",
+        },
     },
     "root": {
-        "level": "INFO", 
+        "level": "INFO",
         "handlers": ["console", "file"],
     },
 }

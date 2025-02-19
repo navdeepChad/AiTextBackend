@@ -1,13 +1,16 @@
+from typing import Dict, Union, Any
 from app.services.session_service import SessionService, UserSessionInfo
 from app.services.jwt_handler import JWTHandler
 from fastapi import HTTPException
 import uuid
 
+
 class AuthScheme:
     COOKIE = "cookie"
     JWT = "jwt"
 
-#dummy in memory db
+
+# dummy in memory db
 user_data = {
     "test_user": {
         "password": "password123",
@@ -18,9 +21,10 @@ user_data = {
     }
 }
 
+
 class AuthenticationService:
     @staticmethod
-    def authenticate(username: str, password: str, auth_scheme: str):
+    def authenticate(username: str, password: str, auth_scheme: str) -> Dict[str, Any]:
         user = user_data.get(username)
         if not user or user["password"] != password:
             raise HTTPException(status_code=401, detail="Invalid credentials")
@@ -35,7 +39,11 @@ class AuthenticationService:
 
         if auth_scheme == AuthScheme.COOKIE:
             SessionService.create_session(user_info)
-            return {"auth_scheme": AuthScheme.COOKIE, "success": True, "session_id": user_info.session_id}
+            return {
+                "auth_scheme": AuthScheme.COOKIE,
+                "success": True,
+                "session_id": user_info.session_id,
+            }
 
         elif auth_scheme == AuthScheme.JWT:
             token = JWTHandler.generate_jwt(user_info.dict())

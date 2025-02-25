@@ -12,7 +12,7 @@ JWT_EXPIRATION_TIME = int(os.getenv("JWT_EXPIRATION_TIME", 1))
 
 class JWTHandler:
     @staticmethod
-    def generate_jwt(payload: Dict) -> str:
+    def generate_jwt(payload: Dict[str, Any]) -> str:
         payload["exp"] = datetime.utcnow() + timedelta(hours=JWT_EXPIRATION_TIME)
         payload["iat"] = datetime.utcnow()
         if not SECRET_KEY:

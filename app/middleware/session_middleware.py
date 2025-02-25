@@ -21,9 +21,9 @@ async def session_middleware(request: Request, call_next):
             raise PyError(
                 BaseResponse(
                     api_response_code=PyError.BADREQUEST,
-                    message=f"Missing required headers: {', '.join(missing_headers)}",  # Message for API response
+                    message=f"Missing required headers: {', '.join(missing_headers)}", 
                 ),
-                message="Request is missing required headers."  # Detailed message for logging
+                message="Request is missing required headers." 
             )
 
         request.state.x_caller = request.headers["x-caller"]

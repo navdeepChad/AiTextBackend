@@ -1,3 +1,4 @@
+from typing import Dict, Union, Any
 from app.services.session_service import SessionService, UserSessionInfo
 from app.services.jwt_handler import JWTHandler
 from fastapi import HTTPException
@@ -7,6 +8,7 @@ from datetime import datetime, timedelta
 from passlib.context import CryptContext
 import pytz
 from app.error.py_error import BaseResponse, PyError
+
 
 
 class AuthScheme:
@@ -30,7 +32,7 @@ user_data = {
 
 class AuthenticationService:
     @staticmethod
-    def authenticate(username: str, password: str, auth_scheme: str):
+    def authenticate(username: str, password: str, auth_scheme: str) -> Dict[str, Any]:
         user = user_data.get(username)
         if not user or not pwd_context.verify(password, user["password"]):
             raise PyError(

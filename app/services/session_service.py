@@ -1,4 +1,5 @@
 import logging
+from typing import Any, Dict
 from fastapi import HTTPException
 from app.models.session import UserSessionInfo
 from datetime import datetime, timedelta
@@ -6,7 +7,8 @@ from typing import Optional
 from app.error.py_error import PyError, BaseResponse
 
 # In-memory session store
-session_store = {}
+session_store: Dict[str, Dict[str, Any]] = {}
+
 
 logger = logging.getLogger("session_service")
 

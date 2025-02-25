@@ -5,6 +5,8 @@ from app.services.jwt_handler import JWTHandler
 from app.services.session_service import SessionService
 from datetime import datetime, timedelta
 from app.error.py_error import BaseResponse, PyError
+from datetime import datetime, timedelta, timezone
+from typing import Dict, Any
 
 router = APIRouter()
 logger = logging.getLogger("auth_router")
@@ -16,7 +18,7 @@ def login(
     request: Request,
     username: str = Form(...), 
     password: str = Form(...),
-):
+) -> Dict[str, Any]:
     logger.info("Login endpoint hit")
     x_caller = request.headers.get("x-caller")
     x_correlationid = request.headers.get("x-correlationid")
@@ -55,7 +57,7 @@ def login(
 
 
 @router.get("/protected")
-def protected_route(request: Request):
+def protected_route(request: Request) -> Dict[str, str]:
     logger.info("Protected endpoint hit")
     x_authscheme = request.headers.get("x-authscheme")
     if not x_authscheme:
@@ -134,8 +136,9 @@ def protected_route(request: Request):
         )
 
 
+
 @router.post("/logout")
-def logout(request: Request, response: Response):
+def logout(request: Request, response: Response) -> Dict[str, str]:
     logger.info("Logout endpoint hit")
     x_authscheme = request.headers.get("x-authscheme")
     if not x_authscheme:

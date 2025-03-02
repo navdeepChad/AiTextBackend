@@ -4,7 +4,8 @@ from app.services.auth_service import AuthenticationService, AuthScheme
 from app.services.jwt_handler import JWTHandler
 from app.services.session_service import SessionService
 from datetime import datetime, timedelta
-from app.error.py_error import BaseResponse, PyError
+from app.error.py_error import BaseResponse, ShipotleError
+from app.middleware.session_middleware import check_required_headers
 from datetime import datetime, timedelta, timezone
 from typing import Dict, Any
 
@@ -16,12 +17,11 @@ logger = logging.getLogger("auth_router")
 def login(
     response: Response,
     request: Request,
-    username: str = Form(...), 
+    username: str = Form(...),
     password: str = Form(...),
 ) -> Dict[str, Any]:
     logger.info("Login endpoint hit")
-    x_caller = request.headers.get("x-caller")
-    x_correlationid = request.headers.get("x-correlationid")
+    check_required_headers(request, ["x-authscheme"])
     x_authscheme = request.headers.get("x-authscheme")
 
     try:
@@ -43,12 +43,12 @@ def login(
                 secure=False,
                 expires=expires.strftime("%a, %d %b %Y %H:%M:%S GMT"),
             )
-    
     except Exception as e:
         logger.error(f"Authentication failed for user '{username}': {str(e)}")
-        raise PyError(
+        raise ShipotleError(
             BaseResponse(
-                api_response_code=PyError.AUTHORIZATION, message="Authentication failed"
+                api_response_code=ShipotleError.AUTHORIZATION,
+                message="Authentication failed",
             ),
             message=f"Authentication failed for user '{username}': {str(e)}",
         )
@@ -59,25 +59,17 @@ def login(
 @router.get("/protected")
 def protected_route(request: Request) -> Dict[str, str]:
     logger.info("Protected endpoint hit")
+    check_required_headers(request, ["x-authscheme"])
     x_authscheme = request.headers.get("x-authscheme")
-    if not x_authscheme:
-        logger.warning("Missing x-authscheme header")
-        raise PyError(
-            BaseResponse(
-                api_response_code=PyError.AUTHORIZATION,
-                message="Missing x-authscheme header",
-            ),
-            message="x-authscheme header is missing",
-        )
 
     if x_authscheme == "jwt":
         authorization = request.headers.get("Authorization")
         if not authorization or not authorization.startswith("Bearer "):
             logger.warning("Missing or invalid Authorization header")
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.AUTHORIZATION,
-                    message="Missing or invalid Authorization header",
+                    api_response_code=ShipotleError.AUTHORIZATION,
+                    message="Invalid or Expired Token",
                 ),
                 message="Missing or invalid Authorization header",
             )
@@ -88,9 +80,10 @@ def protected_route(request: Request) -> Dict[str, str]:
             logger.info(f"Token verified successfully for user: {user_data['sub']}")
         except Exception as e:
             logger.error(f"Token verification failed: {str(e)}")
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.AUTHORIZATION, message="Invalid token"
+                    api_response_code=ShipotleError.AUTHORIZATION,
+                    message="Invalid token",
                 ),
                 message=f"Token verification failed: {str(e)}",
             )
@@ -101,9 +94,9 @@ def protected_route(request: Request) -> Dict[str, str]:
         session_id = request.cookies.get("session_id")
         if not session_id:
             logger.warning("Session cookie missing")
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.AUTHORIZATION,
+                    api_response_code=ShipotleError.AUTHORIZATION,
                     message="Session cookie missing",
                 ),
                 message="Session cookie missing",
@@ -116,9 +109,10 @@ def protected_route(request: Request) -> Dict[str, str]:
             )
         except Exception as e:
             logger.error(f"Session validation failed: {str(e)}")
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.AUTHORIZATION, message="Invalid session"
+                    api_response_code=ShipotleError.AUTHORIZATION,
+                    message="Invalid session",
                 ),
                 message=f"Session validation failed: {str(e)}",
             )
@@ -127,37 +121,28 @@ def protected_route(request: Request) -> Dict[str, str]:
 
     else:
         logger.error("Invalid x-authscheme value")
-        raise PyError(
+        raise ShipotleError(
             BaseResponse(
-                api_response_code=PyError.AUTHORIZATION,
+                api_response_code=ShipotleError.AUTHORIZATION,
                 message="Invalid x-authscheme value",
             ),
             message="Invalid x-authscheme value",
         )
 
 
-
 @router.post("/logout")
 def logout(request: Request, response: Response) -> Dict[str, str]:
     logger.info("Logout endpoint hit")
+    check_required_headers(request, ["x-authscheme"])
     x_authscheme = request.headers.get("x-authscheme")
-    if not x_authscheme:
-        logger.warning("Missing x-authscheme header")
-        raise PyError(
-            BaseResponse(
-                api_response_code=PyError.BADREQUEST,
-                message="Missing x-authscheme header",
-            ),
-            message="Missing x-authscheme header",
-        )
 
     if x_authscheme == "jwt":
         authorization = request.headers.get("Authorization")
         if not authorization or not authorization.startswith("Bearer "):
             logger.warning("Missing or invalid Authorization header")
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.BADREQUEST,
+                    api_response_code=ShipotleError.BADREQUEST,
                     message="Missing or invalid Authorization header",
                 ),
                 message="Missing or invalid Authorization header",
@@ -173,9 +158,9 @@ def logout(request: Request, response: Response) -> Dict[str, str]:
         session_id = request.cookies.get("session_id")
         if not session_id:
             logger.warning("Session cookie missing")
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.AUTHORIZATION,
+                    api_response_code=ShipotleError.AUTHORIZATION,
                     message="Session cookie missing",
                 ),
                 message="Session cookie missing",
@@ -188,9 +173,9 @@ def logout(request: Request, response: Response) -> Dict[str, str]:
             return {"message": "Logged out successfully"}
         except HTTPException as e:
             logger.error(f"Error during session logout: {str(e)}")
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.INTERNAL_ERROR,
+                    api_response_code=ShipotleError.INTERNAL_ERROR,
                     message="Error during session logout",
                 ),
                 message=f"Error during session logout: {str(e)}",
@@ -198,9 +183,9 @@ def logout(request: Request, response: Response) -> Dict[str, str]:
 
     else:
         logger.error("Invalid x-authscheme value")
-        raise PyError(
+        raise ShipotleError(
             BaseResponse(
-                api_response_code=PyError.BADREQUEST,
+                api_response_code=ShipotleError.BADREQUEST,
                 message="Invalid x-authscheme value",
             ),
             message="Invalid x-authscheme value",

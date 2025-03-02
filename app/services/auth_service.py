@@ -7,16 +7,15 @@ import logging
 from datetime import datetime, timedelta
 from passlib.context import CryptContext
 import pytz
-from app.error.py_error import BaseResponse, PyError
-
+from app.error.py_error import BaseResponse, ShipotleError
 
 
 class AuthScheme:
     COOKIE = "cookie"
     JWT = "jwt"
 
+
 logger = logging.getLogger(__name__)
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 # dummy in memory db
 user_data = {
@@ -35,9 +34,9 @@ class AuthenticationService:
     def authenticate(username: str, password: str, auth_scheme: str) -> Dict[str, Any]:
         user = user_data.get(username)
         if not user or not pwd_context.verify(password, user["password"]):
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.AUTHORIZATION,
+                    api_response_code=ShipotleError.AUTHORIZATION,
                     message="Invalid credentials",
                 ),
                 message="Invalid username or password",
@@ -64,14 +63,13 @@ class AuthenticationService:
                 }
             except Exception as e:
                 logger.error(f"Error creating session for user '{username}': {str(e)}")
-                raise PyError(
+                raise ShipotleError(
                     BaseResponse(
-                        api_response_code=PyError.INTERNAL_ERROR,
+                        api_response_code=ShipotleError.INTERNAL_ERROR,
                         message="Failed to create session",
                     ),
                     message=f"Error creating session for user '{username}': {str(e)}",
                 )
-
 
         elif auth_scheme == AuthScheme.JWT:
             try:
@@ -83,30 +81,32 @@ class AuthenticationService:
                     sep=" ", timespec="seconds"
                 )
                 payload["sub"] = user["user_id"]
-                
+
                 token = JWTHandler.generate_jwt(payload)
                 logger.info(f"JWT generated for user '{username}'")
                 return {
                     "auth_scheme": AuthScheme.JWT,
                     "success": True,
                     "token": token,
-                    "expires_in": "86400", # currently set to 1 day
+                    "expires_in": 86400,  # currently set to 1 day
                 }
             except Exception as e:
                 logger.error(f"Error generating JWT for user '{username}': {str(e)}")
-                raise PyError(
+                raise ShipotleError(
                     BaseResponse(
-                        api_response_code=PyError.INTERNAL_ERROR,
+                        api_response_code=ShipotleError.INTERNAL_ERROR,
                         message="Failed to generate JWT token",
                     ),
                     message=f"Error generating JWT for user '{username}': {str(e)}",
                 )
 
         else:
-            logger.error(f"Invalid authentication scheme provided for user '{username}': {auth_scheme}")
-            raise PyError(
+            logger.error(
+                f"Invalid authentication scheme provided for user '{username}': {auth_scheme}"
+            )
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.BADREQUEST,
+                    api_response_code=ShipotleError.BADREQUEST,
                     message="Invalid authentication scheme",
                 ),
                 message="Auth scheme must be either 'cookie' or 'jwt'",

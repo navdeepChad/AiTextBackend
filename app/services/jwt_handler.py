@@ -1,9 +1,9 @@
 import jwt
 from datetime import datetime, timedelta
 from fastapi import HTTPException
-from typing import Dict
+from typing import Dict, Any
 import os
-from app.error.py_error import PyError, BaseResponse
+from app.error.py_error import ShipotleError, BaseResponse
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 JWT_ALGORITHM = os.getenv("JWT_ALGORITHM", "HS256")
@@ -16,9 +16,9 @@ class JWTHandler:
         payload["exp"] = datetime.utcnow() + timedelta(hours=JWT_EXPIRATION_TIME)
         payload["iat"] = datetime.utcnow()
         if not SECRET_KEY:
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.INTERNAL_ERROR,
+                    api_response_code=ShipotleError.INTERNAL_ERROR,
                     message="SECRET_KEY is not set",
                 ),
                 message="JWT generation failed due to missing SECRET_KEY",
@@ -27,9 +27,9 @@ class JWTHandler:
             token = jwt.encode(payload, SECRET_KEY, algorithm=JWT_ALGORITHM)
             return token
         except Exception as e:
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.INTERNAL_ERROR,
+                    api_response_code=ShipotleError.INTERNAL_ERROR,
                     message="Error encoding JWT",
                 ),
                 message=f"JWT encoding error: {str(e)}",
@@ -38,9 +38,9 @@ class JWTHandler:
     @staticmethod
     def verify_jwt(token: str) -> Dict:
         if not SECRET_KEY:
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.INTERNAL_ERROR,
+                    api_response_code=ShipotleError.INTERNAL_ERROR,
                     message="error getting secret key",
                 ),
                 message="error getting secret key",
@@ -49,23 +49,26 @@ class JWTHandler:
             payload = jwt.decode(token, SECRET_KEY, algorithms=[JWT_ALGORITHM])
             return payload
         except jwt.ExpiredSignatureError:
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.AUTHORIZATION, message="token has expired"
+                    api_response_code=ShipotleError.AUTHORIZATION,
+                    message="token has expired",
                 ),
                 message="token has expired",
             )
         except jwt.InvalidTokenError:
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.AUTHORIZATION, message="Invalid token"
+                    api_response_code=ShipotleError.AUTHORIZATION,
+                    message="Invalid token",
                 ),
                 message="invalid JWT token",
             )
         except Exception as e:
-            raise PyError(
+            raise ShipotleError(
                 BaseResponse(
-                    api_response_code=PyError.BADREQUEST, message="Error decoding token"
+                    api_response_code=ShipotleError.BADREQUEST,
+                    message="Error decoding token",
                 ),
                 message=f"JWT decoding error: {str(e)}",
             )

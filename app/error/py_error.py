@@ -9,7 +9,7 @@ class BaseResponse(BaseModel):
     version: Optional[str] = None
 
 
-class PyError(Exception):
+class ShipotleError(Exception):
     INTERNAL_ERROR = 5000
     FORBIDDEN = 4003
     AUTHORIZATION = 4001
@@ -21,7 +21,7 @@ class PyError(Exception):
     def __init__(
         self,
         error_response: BaseResponse,
-        message: str = "",
+        message: str = "An error occured",
         ex: Optional[Exception] = None,
     ):
         full_message = f"{message} && {str(ex)}" if ex else message
@@ -31,17 +31,17 @@ class PyError(Exception):
     @staticmethod
     def get_error_mapping(api_response_code: int) -> Dict:
         error_mappings = {
-            PyError.INTERNAL_ERROR: {
+            ShipotleError.INTERNAL_ERROR: {
                 "status_code": 500,
                 "message": "Internal Server Error",
             },
-            PyError.FORBIDDEN: {"status_code": 403, "message": "Forbidden Error"},
-            PyError.AUTHORIZATION: {
+            ShipotleError.FORBIDDEN: {"status_code": 403, "message": "Forbidden Error"},
+            ShipotleError.AUTHORIZATION: {
                 "status_code": 401,
                 "message": "Authorization Error",
             },
-            PyError.BADREQUEST: {"status_code": 400, "message": "Bad Request"},
-            PyError.RESOURCE_NOT_FOUND: {
+            ShipotleError.BADREQUEST: {"status_code": 400, "message": "Bad Request"},
+            ShipotleError.RESOURCE_NOT_FOUND: {
                 "status_code": 404,
                 "message": "Resource Not Found",
             },
@@ -54,7 +54,9 @@ class PyError(Exception):
         return json.dumps(self.error_response.dict())
 
     def to_action_result(self) -> Dict:
-        error_mapping = PyError.get_error_mapping(self.error_response.api_response_code)
+        error_mapping = ShipotleError.get_error_mapping(
+            self.error_response.api_response_code
+        )
         return {
             "status_code": error_mapping["status_code"],
             "message": self.error_response.message,

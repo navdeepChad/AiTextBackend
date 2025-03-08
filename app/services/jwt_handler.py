@@ -2,8 +2,11 @@ import jwt
 from datetime import datetime, timedelta
 from fastapi import HTTPException
 from typing import Dict, Any
+from dotenv import load_dotenv
 import os
 from app.error.py_error import ShipotleError, BaseResponse
+
+load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 JWT_ALGORITHM = os.getenv("JWT_ALGORITHM", "HS256")

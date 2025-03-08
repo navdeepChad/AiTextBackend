@@ -247,3 +247,5 @@
 2025-03-02 21:57:39,015 - auth_router - INFO - Logout endpoint hit
 2025-03-02 21:57:39,017 - session_service - INFO - Deleted session for session_id: f05232c5-c430-4e33-957e-64134b66443e
 2025-03-02 21:57:39,017 - auth_router - INFO - Logged out session: f05232c5-c430-4e33-957e-64134b66443e
+2025-03-08 18:30:27,449 - session_middleware - INFO - Session middleware invoked for path /docs
+2025-03-08 18:30:28,613 - session_middleware - INFO - Session middleware invoked for path /openapi.json

@@ -53,200 +53,199 @@
 2025-01-28 20:01:06,258 - session_middleware - INFO - Session middleware invoked
 2025-01-28 20:01:06,261 - auth_router - INFO - Protected endpoint hit
 2025-01-28 20:01:06,263 - auth_router - WARNING - session cookie missing
-2025-02-01 22:20:29,882 - session_middleware - INFO - Session middleware invoked
-2025-02-01 22:20:29,970 - session_middleware - INFO - Session middleware invoked
-2025-02-01 22:20:47,355 - session_middleware - INFO - Session middleware invoked
-2025-02-01 22:20:47,401 - session_middleware - INFO - Session middleware invoked
-2025-02-02 20:58:46,692 - session_middleware - INFO - Session middleware invoked
-2025-02-02 20:58:46,748 - session_middleware - INFO - Session middleware invoked
-2025-02-02 21:49:47,974 - session_middleware - INFO - Session middleware invoked
-2025-02-02 21:50:11,148 - session_middleware - INFO - Session middleware invoked
-2025-02-02 21:50:15,476 - session_middleware - INFO - Session middleware invoked
-2025-02-02 21:55:13,094 - session_middleware - INFO - Session middleware invoked
-2025-02-02 21:58:11,318 - session_middleware - INFO - Session middleware invoked
-2025-02-02 22:01:56,141 - session_middleware - INFO - Session middleware invoked
-2025-02-02 22:02:56,920 - session_middleware - INFO - Session middleware invoked
-2025-02-02 22:04:32,496 - session_middleware - INFO - Session middleware invoked
-2025-02-02 22:04:32,500 - auth_router - INFO - Login endpoint hit
-2025-02-02 22:04:32,500 - auth_router - ERROR - authentication failed for user 'scientist.deepanshu@gmail.com': 401: Invalid credentials
-2025-02-07 21:56:44,849 - session_middleware - INFO - Session middleware invoked
-2025-02-07 21:56:45,306 - session_middleware - INFO - Session middleware invoked
-2025-02-07 21:57:47,308 - session_middleware - INFO - Session middleware invoked
-2025-02-07 21:57:47,310 - auth_router - INFO - Login endpoint hit
-2025-02-07 21:57:47,311 - auth_router - ERROR - authentication failed for user 'scientist.deepanshu@gmail.com': 401: Invalid credentials
-2025-02-07 22:44:47,120 - session_middleware - INFO - Session middleware invoked
-2025-02-07 22:44:47,167 - session_middleware - INFO - Session middleware invoked
-2025-02-07 22:44:48,419 - session_middleware - INFO - Session middleware invoked
-2025-02-07 22:44:48,481 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:30:33,219 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:30:33,259 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:31:08,747 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:31:08,797 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:31:24,322 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:31:24,379 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:31:29,027 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:31:29,096 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:15,772 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:15,829 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:21,999 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:22,074 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:33,471 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:33,503 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:37,583 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:37,598 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:42,495 - session_middleware - INFO - Session middleware invoked
-2025-02-08 23:32:42,512 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:43:49,517 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:43:49,520 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:43:49,521 - auth_router - ERROR - authentication failed for user 'scientist.deepanshu@gmail.com': 401: Invalid credentials
-2025-02-09 02:44:44,935 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:44:44,937 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:44:44,937 - auth_router - ERROR - authentication failed for user 'test@example.com': 401: Invalid credentials
-2025-02-09 02:44:54,771 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:44:54,773 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:44:54,773 - auth_router - ERROR - authentication failed for user 'test_user': 400: Invalid authentication scheme
-2025-02-09 02:46:22,354 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:46:22,355 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:46:22,355 - auth_router - ERROR - authentication failed for user 'test_user': 400: Invalid authentication scheme
-2025-02-09 02:46:31,225 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:46:31,227 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:46:31,227 - auth_router - ERROR - authentication failed for user 'test_user': 400: Invalid authentication scheme
-2025-02-09 02:48:14,742 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:48:14,744 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:48:14,746 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
-2025-02-09 02:48:37,589 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:48:37,590 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:48:37,591 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
-2025-02-09 02:48:51,750 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:48:51,752 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:48:51,752 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
-2025-02-09 02:49:12,596 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:49:12,597 - auth_router - INFO - Protected endpoint hit
-2025-02-09 02:49:12,597 - auth_router - INFO - token verified successfully for user: test_user
-2025-02-09 02:49:17,804 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:49:17,805 - auth_router - INFO - Protected endpoint hit
-2025-02-09 02:49:17,805 - auth_router - ERROR - token verification failed: 401: Invalid token
-2025-02-09 02:49:22,249 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:49:22,250 - auth_router - INFO - Protected endpoint hit
-2025-02-09 02:49:22,251 - auth_router - INFO - token verified successfully for user: test_user
-2025-02-09 02:49:38,786 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:49:38,787 - auth_router - INFO - Logout endpoint hit
-2025-02-09 02:49:38,787 - auth_router - WARNING - Session cookie missing
-2025-02-09 02:53:11,920 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:53:11,921 - auth_router - INFO - Logout endpoint hit
-2025-02-09 02:53:11,921 - auth_router - WARNING - Session cookie missing
-2025-02-09 02:53:21,565 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:53:21,566 - auth_router - INFO - Logout endpoint hit
-2025-02-09 02:53:21,566 - auth_router - WARNING - missing or invalid Authorization header
-2025-02-09 02:53:29,628 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:53:29,629 - auth_router - INFO - Logout endpoint hit
-2025-02-09 02:53:29,629 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiMDY5Zjc5M2YtZGViMS00MjVlLWEyMmMtMDdjZjQxOThjNDczIiwidXNlcl9pZCI6IjEyMyIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInB1YmxpY191c2VybmFtZSI6InRlc3RfdXNlciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc1MjAwOTUzMX0.1-aSOtFGkYCj0oY98bzpEqNCycNT1EkqZvYWXl36kHM
-2025-02-09 02:53:35,642 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:53:35,643 - auth_router - INFO - Protected endpoint hit
-2025-02-09 02:53:35,644 - auth_router - INFO - token verified successfully for user: test_user
-2025-02-09 02:54:02,511 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:54:02,512 - auth_router - INFO - Logout endpoint hit
-2025-02-09 02:54:02,512 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiMDY5Zjc5M2YtZGViMS00MjVlLWEyMmMtMDdjZjQxOThjNDczIiwidXNlcl9pZCI6IjEyMyIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInB1YmxpY191c2VybmFtZSI6InRlc3RfdXNlciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc1MjAwOTUzMX0.1-aSOtFGkYCj0oY98bzpEqNCycNT1EkqZvYWXl36kHM
-2025-02-09 02:54:21,144 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:54:21,147 - auth_router - INFO - Logout endpoint hit
-2025-02-09 02:54:21,147 - auth_router - WARNING - Session cookie missing
-2025-02-09 02:54:33,737 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:54:33,738 - auth_router - INFO - Logout endpoint hit
-2025-02-09 02:54:33,738 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiMDY5Zjc5M2YtZGViMS00MjVlLWEyMmMtMDdjZjQxOThjNDczIiwidXNlcl9pZCI6IjEyMyIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInB1YmxpY191c2VybmFtZSI6InRlc3RfdXNlciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc1MjAwOTUzMX0.1-aSOtFGkYCj0oY98bzpEqNCycNT1EkqZvYWXl36kHM
-2025-02-09 02:56:12,878 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:56:12,879 - auth_router - INFO - Logout endpoint hit
-2025-02-09 02:56:12,880 - auth_router - WARNING - Session cookie missing
-2025-02-09 02:58:39,012 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:58:39,014 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:58:39,015 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
-2025-02-09 02:59:09,901 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:59:09,902 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:59:09,902 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
-2025-02-09 02:59:15,000 - session_middleware - INFO - Session middleware invoked
-2025-02-09 02:59:15,001 - auth_router - INFO - Login endpoint hit
-2025-02-09 02:59:15,002 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
-2025-02-09 03:00:38,187 - session_middleware - INFO - Session middleware invoked
-2025-02-09 03:00:38,188 - auth_router - INFO - Login endpoint hit
-2025-02-09 03:00:38,188 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
-2025-02-09 03:04:08,254 - session_middleware - INFO - Session middleware invoked
-2025-02-09 03:04:08,256 - auth_router - INFO - Login endpoint hit
-2025-02-09 03:04:08,257 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
-2025-02-09 03:09:55,788 - session_middleware - INFO - Session middleware invoked
-2025-02-09 03:09:55,789 - auth_router - INFO - Logout endpoint hit
-2025-02-09 03:09:55,791 - auth_router - INFO - session f387ca22-e84b-473c-a0a2-8e0c3269dfc4 logout
-2025-02-09 03:09:58,401 - session_middleware - INFO - Session middleware invoked
-2025-02-09 03:09:58,402 - auth_router - INFO - Logout endpoint hit
-2025-02-09 03:09:58,402 - auth_router - WARNING - Session cookie missing
-2025-02-09 14:34:10,261 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:34:10,263 - auth_router - INFO - Login endpoint hit
-2025-02-09 14:34:10,264 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
-2025-02-09 14:34:25,451 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:34:25,452 - auth_router - INFO - Login endpoint hit
-2025-02-09 14:34:25,453 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
-2025-02-09 14:34:40,142 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:34:40,144 - auth_router - INFO - Login endpoint hit
-2025-02-09 14:34:40,144 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
-2025-02-09 14:34:47,132 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:34:47,133 - auth_router - INFO - Login endpoint hit
-2025-02-09 14:34:47,134 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
-2025-02-09 14:34:51,977 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:34:51,978 - auth_router - INFO - Protected endpoint hit
-2025-02-09 14:34:51,979 - auth_router - INFO - token verified successfully for user: test_user
-2025-02-09 14:34:55,538 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:34:55,539 - auth_router - INFO - Logout endpoint hit
-2025-02-09 14:34:55,539 - auth_router - INFO - session dae4c350-c5fc-44cc-a954-4a723b9b9287 logout
-2025-02-09 14:34:57,670 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:34:57,670 - auth_router - INFO - Logout endpoint hit
-2025-02-09 14:34:57,671 - auth_router - WARNING - Session cookie missing
-2025-02-09 14:39:59,338 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:39:59,340 - auth_router - INFO - Login endpoint hit
-2025-02-09 14:39:59,340 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
-2025-02-09 14:40:07,297 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:40:07,298 - auth_router - INFO - Protected endpoint hit
-2025-02-09 14:40:07,298 - auth_router - INFO - session verified successfully for user: test_user
-2025-02-09 14:40:16,571 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:40:16,572 - auth_router - INFO - Protected endpoint hit
-2025-02-09 14:40:16,572 - auth_router - INFO - token verified successfully for user: test_user
-2025-02-09 14:51:04,156 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:51:04,157 - auth_router - INFO - Protected endpoint hit
-2025-02-09 14:51:04,157 - auth_router - INFO - token verified successfully for user: test_user
-2025-02-09 14:51:19,168 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:51:19,169 - auth_router - INFO - Logout endpoint hit
-2025-02-09 14:51:19,169 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiMDY5Zjc5M2YtZGViMS00MjVlLWEyMmMtMDdjZjQxOThjNDczIiwidXNlcl9pZCI6IjEyMyIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInB1YmxpY191c2VybmFtZSI6InRlc3RfdXNlciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc1MjAwOTUzMX0.1-aSOtFGkYCj0oY98bzpEqNCycNT1EkqZvYWXl36kHM
-2025-02-09 14:55:28,954 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:55:28,955 - auth_router - INFO - Protected endpoint hit
-2025-02-09 14:55:28,956 - auth_router - ERROR - token verification failed: 401: Invalid token
-2025-02-09 14:55:48,259 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:55:48,260 - auth_router - INFO - Protected endpoint hit
-2025-02-09 14:55:48,260 - auth_router - INFO - token verified successfully for user: test_user
-2025-02-09 14:56:20,890 - session_middleware - INFO - Session middleware invoked
-2025-02-09 14:56:20,891 - auth_router - INFO - Logout endpoint hit
-2025-02-09 14:56:20,891 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiZGI5OTYxMDUtZmNlNC00YzYzLWFiNGEtODdlNjFiZGY4ZjJiIiwidXNlcl9pZCI6IjEyMyIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInB1YmxpY191c2VybmFtZSI6InRlc3RfdXNlciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc1MjA1MTg4MH0.w0TMO6WyZuclw7ushX311gJU-hSmgY5TnaMMU6y8D0Q
-2025-02-09 16:23:51,822 - session_middleware - INFO - Session middleware invoked
-2025-02-09 16:23:51,827 - auth_router - INFO - Login endpoint hit
-2025-02-09 16:23:51,828 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
-2025-02-09 16:24:07,678 - session_middleware - INFO - Session middleware invoked
-2025-02-09 16:24:07,679 - auth_router - INFO - Protected endpoint hit
-2025-02-09 16:24:07,680 - auth_router - INFO - token verified successfully for user: test_user
-2025-02-09 16:24:13,843 - session_middleware - INFO - Session middleware invoked
-2025-02-09 16:24:13,847 - auth_router - INFO - Protected endpoint hit
-2025-02-09 16:24:13,847 - auth_router - ERROR - token verification failed: 401: Invalid token
-2025-02-09 16:24:22,884 - session_middleware - INFO - Session middleware invoked
-2025-02-09 16:24:22,885 - auth_router - INFO - Logout endpoint hit
-2025-02-09 16:24:22,886 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiNzRmNzI2MDQtYzAwNi00YzdmLWFmZjQtMTY0NjhmNjgyOWVhIiwidXNlcl9pZCI6IjEyMyIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInB1YmxpY191c2VybmFtZSI6InRlc3RfdXNlciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc1MjA1ODQzMX0.4B2RpEuGIMnw1ULjzhxmr7AyRCOpJFjsbqq4jRw78cU
-2025-02-09 16:24:55,773 - session_middleware - INFO - Session middleware invoked
-2025-02-09 16:24:55,774 - auth_router - INFO - Login endpoint hit
-2025-02-09 16:24:55,775 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
-2025-02-09 16:25:08,120 - session_middleware - INFO - Session middleware invoked
-2025-02-09 16:25:08,121 - auth_router - INFO - Protected endpoint hit
-2025-02-09 16:25:08,122 - auth_router - INFO - session verified successfully for user: test_user
-2025-02-09 16:25:17,295 - session_middleware - INFO - Session middleware invoked
-2025-02-09 16:25:17,296 - auth_router - INFO - Logout endpoint hit
-2025-02-09 16:25:17,296 - auth_router - INFO - session 299d67c9-c629-443a-97f4-a6eff877918f logout
-2025-02-09 16:25:20,694 - session_middleware - INFO - Session middleware invoked
-2025-02-09 16:25:20,695 - auth_router - INFO - Logout endpoint hit
-2025-02-09 16:25:20,695 - auth_router - WARNING - Session cookie missing
-2025-02-14 23:25:15,804 - session_middleware - INFO - Session middleware invoked
-2025-02-14 23:25:15,844 - session_middleware - INFO - Session middleware invoked
-2025-02-14 23:25:19,975 - session_middleware - INFO - Session middleware invoked
-2025-02-14 23:25:20,322 - session_middleware - INFO - Session middleware invoked
+2025-03-01 22:41:51,211 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-01 22:41:51,213 - auth_router - INFO - Login endpoint hit
+2025-03-01 22:41:51,409 - app.services.auth_service - INFO - JWT generated for user 'test_user'
+2025-03-01 22:41:51,409 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-03-01 22:41:57,269 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-01 22:41:57,271 - auth_router - INFO - Login endpoint hit
+2025-03-01 22:41:57,271 - auth_router - ERROR - Authentication failed for user 'test_users': {"api_response_code": 4001, "message": "Invalid credentials", "version": null}
+2025-03-02 15:58:27,367 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 15:58:27,369 - auth_router - INFO - Login endpoint hit
+2025-03-02 15:58:27,370 - auth_router - ERROR - Authentication failed for user 'test_users': {"api_response_code": 4001, "message": "Invalid credentials", "version": null}
+2025-03-02 16:00:07,565 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 16:00:07,567 - auth_router - INFO - Login endpoint hit
+2025-03-02 16:00:07,764 - app.services.auth_service - INFO - JWT generated for user 'test_user'
+2025-03-02 16:00:07,764 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-03-02 16:00:14,893 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 16:00:14,894 - auth_router - INFO - Login endpoint hit
+2025-03-02 16:00:15,088 - auth_router - ERROR - Authentication failed for user 'test_user': {"api_response_code": 4001, "message": "Invalid credentials", "version": null}
+2025-03-02 16:03:11,923 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 16:03:11,925 - auth_router - INFO - Login endpoint hit
+2025-03-02 16:03:12,126 - session_service - INFO - Created session for user: test_user, session_id: c6a3f2a2-89af-4c9a-a43f-09ebfb2c1019
+2025-03-02 16:03:12,126 - app.services.auth_service - INFO - Session created for user 'test_user'
+2025-03-02 16:03:12,126 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-03-02 16:03:14,704 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 16:03:14,704 - auth_router - INFO - Login endpoint hit
+2025-03-02 16:03:14,705 - auth_router - ERROR - Authentication failed for user 'test_users': {"api_response_code": 4001, "message": "Invalid credentials", "version": null}
+2025-03-02 16:38:02,770 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 16:38:02,772 - auth_router - INFO - Login endpoint hit
+2025-03-02 16:38:02,772 - auth_router - ERROR - Authentication failed for user 'test_users': {"api_response_code": 4001, "message": "Invalid credentials", "version": null}
+2025-03-02 16:38:03,509 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 16:38:03,509 - auth_router - INFO - Login endpoint hit
+2025-03-02 16:38:03,509 - auth_router - ERROR - Authentication failed for user 'test_users': {"api_response_code": 4001, "message": "Invalid credentials", "version": null}
+2025-03-02 16:38:08,070 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 16:38:08,071 - auth_router - INFO - Login endpoint hit
+2025-03-02 16:38:08,266 - session_service - INFO - Created session for user: test_user, session_id: 896bacf1-eddf-49d8-9f54-9780e5dab065
+2025-03-02 16:38:08,266 - app.services.auth_service - INFO - Session created for user 'test_user'
+2025-03-02 16:38:08,266 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-03-02 21:31:16,825 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:16,826 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:16,827 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:22,017 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:22,018 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:22,019 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:23,152 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:23,152 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:23,152 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:23,974 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:23,975 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:23,975 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:26,712 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:26,714 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:26,714 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:27,326 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:27,326 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:27,327 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:31,262 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:31,262 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:31,262 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:32,074 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:32,074 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:32,075 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:32,278 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:32,279 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:32,279 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:32,471 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:32,471 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:32,471 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:32,640 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:32,640 - session_middleware - WARNING - Missing x-authscheme header
+2025-03-02 21:31:32,640 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-authscheme header", "version": null}
+2025-03-02 21:31:58,428 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:31:58,429 - session_middleware - WARNING - Missing x-caller header
+2025-03-02 21:31:58,432 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-caller header", "version": null}
+2025-03-02 21:32:02,622 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:32:02,623 - session_middleware - WARNING - Missing x-correlationid header
+2025-03-02 21:32:02,623 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing x-correlationid header", "version": null}
+2025-03-02 21:32:05,730 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:32:05,740 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:32:05,935 - app.services.auth_service - INFO - JWT generated for user 'test_user'
+2025-03-02 21:32:05,936 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-03-02 21:33:04,929 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:33:04,930 - session_middleware - WARNING - Missing headers: x-authscheme, x-caller, x-correlationid
+2025-03-02 21:33:04,930 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing required headers: x-authscheme, x-caller, x-correlationid", "version": null}
+2025-03-02 21:33:08,409 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:33:08,410 - session_middleware - WARNING - Missing headers: x-authscheme, x-caller
+2025-03-02 21:33:08,410 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing required headers: x-authscheme, x-caller", "version": null}
+2025-03-02 21:40:23,654 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:40:23,654 - session_middleware - WARNING - Missing headers: x-authscheme, x-caller
+2025-03-02 21:40:23,655 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing required headers: x-authscheme, x-caller", "version": null}
+2025-03-02 21:40:27,505 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:40:27,510 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:40:27,705 - app.services.auth_service - INFO - JWT generated for user 'test_user'
+2025-03-02 21:40:27,705 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-03-02 21:48:01,217 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:48:01,221 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:48:01,426 - app.services.auth_service - INFO - JWT generated for user 'test_user'
+2025-03-02 21:48:01,426 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-03-02 21:48:03,849 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:48:03,849 - session_middleware - WARNING - Missing headers: x-correlationid
+2025-03-02 21:48:03,850 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing required headers: x-correlationid", "version": null}
+2025-03-02 21:48:09,784 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:48:09,787 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:48:09,999 - session_service - INFO - Created session for user: test_user, session_id: a2a96fbd-8784-48d5-ad46-cf501256f84b
+2025-03-02 21:48:09,999 - app.services.auth_service - INFO - Session created for user 'test_user'
+2025-03-02 21:48:09,999 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-03-02 21:48:13,370 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:48:13,370 - session_middleware - WARNING - Missing headers: x-caller
+2025-03-02 21:48:13,371 - session_middleware - ERROR - middleware error {"api_response_code": 4000, "message": "Missing required headers: x-caller", "version": null}
+2025-03-02 21:48:16,935 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:48:16,937 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:48:17,149 - session_service - INFO - Created session for user: test_user, session_id: 4ca52809-f47e-4216-93a3-01e5a4d112f8
+2025-03-02 21:48:17,149 - app.services.auth_service - INFO - Session created for user 'test_user'
+2025-03-02 21:48:17,149 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-03-02 21:48:25,831 - session_middleware - INFO - Session middleware invoked for path /auth/protected
+2025-03-02 21:48:25,833 - auth_router - INFO - Protected endpoint hit
+2025-03-02 21:48:25,833 - auth_router - ERROR - Invalid x-authscheme value
+2025-03-02 21:48:31,116 - session_middleware - INFO - Session middleware invoked for path /auth/protected
+2025-03-02 21:48:31,121 - auth_router - INFO - Protected endpoint hit
+2025-03-02 21:48:31,121 - auth_router - WARNING - Missing or invalid Authorization header
+2025-03-02 21:48:38,524 - session_middleware - INFO - Session middleware invoked for path /auth/protected
+2025-03-02 21:48:38,525 - auth_router - INFO - Protected endpoint hit
+2025-03-02 21:48:38,525 - auth_router - WARNING - Missing or invalid Authorization header
+2025-03-02 21:50:13,176 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:50:13,183 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:50:13,391 - app.services.auth_service - INFO - JWT generated for user 'test_user'
+2025-03-02 21:50:13,391 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-03-02 21:50:26,601 - session_middleware - INFO - Session middleware invoked for path /auth/protected
+2025-03-02 21:50:26,603 - auth_router - INFO - Protected endpoint hit
+2025-03-02 21:50:26,603 - auth_router - INFO - Token verified successfully for user: 123
+2025-03-02 21:51:56,055 - session_middleware - INFO - Session middleware invoked for path /auth/protected
+2025-03-02 21:51:56,056 - auth_router - INFO - Protected endpoint hit
+2025-03-02 21:51:56,063 - auth_router - ERROR - Token verification failed: {"api_response_code": 4001, "message": "Invalid token", "version": null}
+2025-03-02 21:52:04,857 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:04,860 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:04,860 - auth_router - WARNING - Missing or invalid Authorization header
+2025-03-02 21:52:12,874 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:12,876 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:12,876 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiZWZlNWRmOGUtNDhlMy00ZTVhLWJlY2EtZThhZTQzYjE0OTQxIiwicHVibGljX3VzZXJuYW1lIjoidGVzdF91c2VyIiwiY3JlYXRlZF9hdCI6IjIwMjUtMDMtMDIgMTY6MjA6MTMiLCJleHBpcnlfdGltZSI6IjIwMjUtMDMtMDIgMTc6MjA6MTMiLCJyb2xlIjoiYWRtaW4iLCJzdWIiOiIxMjMiLCJleHAiOjE3NTM4OTI0MTMsImlhdCI6MTc0MDkzMjQxM30.XV2kE67AYxLdZmo0O4MlulApn7CZuoVfDyWiDycIWHs
+2025-03-02 21:52:14,812 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:14,816 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:14,816 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiZWZlNWRmOGUtNDhlMy00ZTVhLWJlY2EtZThhZTQzYjE0OTQxIiwicHVibGljX3VzZXJuYW1lIjoidGVzdF91c2VyIiwiY3JlYXRlZF9hdCI6IjIwMjUtMDMtMDIgMTY6MjA6MTMiLCJleHBpcnlfdGltZSI6IjIwMjUtMDMtMDIgMTc6MjA6MTMiLCJyb2xlIjoiYWRtaW4iLCJzdWIiOiIxMjMiLCJleHAiOjE3NTM4OTI0MTMsImlhdCI6MTc0MDkzMjQxM30.XV2kE67AYxLdZmo0O4MlulApn7CsZuoVfDyWiDycIWHs
+2025-03-02 21:52:18,588 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:18,590 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:18,590 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiZWZlNWRmOGUtNDhlMy00ZTVhLWJlY2EtZThhZTQzYjE0OTQxIiwicHVibGljX3VzZXJuYW1lIjoidGVzdF91c2VyIiwiY3JlYXRlZF9hdCI6IjIwMjUtMDMtMDIgMTY6MjA6MTMiLCJleHBpcnlfdGltZSI6IjIwMjUtMDMtMDIgMTc6MjA6MTMiLCJyb2xlIjoiYWRtaW4iLCJzdWIiOiIxMjMiLCJleHAiOjE3NTM4OTI0MTMsImlhdCI6MTc0MDkzMjQxM30.XV2kE67AYxLdZmo0O4MlulApn7CsZuoVfDyWidssdDycIWHs
+2025-03-02 21:52:26,868 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:26,871 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:26,871 - auth_router - WARNING - Session cookie missing
+2025-03-02 21:52:30,823 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:52:30,839 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:52:31,057 - session_service - INFO - Created session for user: test_user, session_id: 0fe4a64a-72c4-40b2-83c3-02dd52b529b2
+2025-03-02 21:52:31,057 - app.services.auth_service - INFO - Session created for user 'test_user'
+2025-03-02 21:52:31,057 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-03-02 21:52:33,283 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:33,285 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:33,285 - auth_router - WARNING - Session cookie missing
+2025-03-02 21:52:39,753 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:39,755 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:39,755 - auth_router - WARNING - Session cookie missing
+2025-03-02 21:52:41,234 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:41,235 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:41,235 - auth_router - WARNING - Session cookie missing
+2025-03-02 21:52:41,817 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:41,819 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:41,819 - auth_router - WARNING - Session cookie missing
+2025-03-02 21:52:42,061 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:42,062 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:42,062 - auth_router - WARNING - Session cookie missing
+2025-03-02 21:52:44,756 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:52:44,758 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:52:44,971 - session_service - INFO - Created session for user: test_user, session_id: 35b04050-e107-41a0-b861-388a4051f13d
+2025-03-02 21:52:44,972 - app.services.auth_service - INFO - Session created for user 'test_user'
+2025-03-02 21:52:44,972 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-03-02 21:52:48,497 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:48,499 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:48,500 - auth_router - WARNING - Session cookie missing
+2025-03-02 21:52:49,363 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:52:49,364 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:52:49,365 - auth_router - WARNING - Session cookie missing
+2025-03-02 21:53:24,570 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:53:24,572 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:53:24,773 - session_service - INFO - Created session for user: test_user, session_id: e0f05d4a-d410-4be0-aa46-cdb1fbc0cdc2
+2025-03-02 21:53:24,773 - app.services.auth_service - INFO - Session created for user 'test_user'
+2025-03-02 21:53:24,773 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-03-02 21:53:30,337 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:53:30,342 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:53:30,343 - auth_router - WARNING - Session cookie missing
+2025-03-02 21:57:25,599 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-02 21:57:25,618 - auth_router - INFO - Login endpoint hit
+2025-03-02 21:57:25,841 - session_service - INFO - Created session for user: test_user, session_id: f05232c5-c430-4e33-957e-64134b66443e
+2025-03-02 21:57:25,842 - app.services.auth_service - INFO - Session created for user 'test_user'
+2025-03-02 21:57:25,842 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-03-02 21:57:39,011 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-02 21:57:39,015 - auth_router - INFO - Logout endpoint hit
+2025-03-02 21:57:39,017 - session_service - INFO - Deleted session for session_id: f05232c5-c430-4e33-957e-64134b66443e
+2025-03-02 21:57:39,017 - auth_router - INFO - Logged out session: f05232c5-c430-4e33-957e-64134b66443e
+2025-03-08 18:30:27,449 - session_middleware - INFO - Session middleware invoked for path /docs
+2025-03-08 18:30:28,613 - session_middleware - INFO - Session middleware invoked for path /openapi.json

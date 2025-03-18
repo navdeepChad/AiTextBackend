@@ -46,51 +46,51 @@ uvicorn app.main:app --reload
 
 Your FastAPI app should now be running locally at http://127.0.0.1:8000. You can access the Swagger UI at http://127.0.0.1:8000/docs.
 
-# Running with Docker
+# Running with Docker Compose
 
-## 1. Build the Docker image:
+## 1. Build and run the application using Docker Compose:
 
-From the root directory of the project, run the following command to build the Docker image (to build docker image):
+From the root directory of the project, where the docker-compose.yml file is located, you can use the following command to build and run your application:
 
 ```
-docker build -t <name of image> .
+docker-compose up --build
 ```
 
-## 2. Run the Docker container:
 
-Once the image is built, you can run the container using the following command:
+## 2. Verify that the Docker container is running:
+
+Once the container is running, you can verify it by listing the running containers with:
 
 ```bash
-docker run -d -p 8000:8000 fastapi_template:latest
+docker-compose ps
 ```
+This will show the services defined in your docker-compose.yml file. You should see your app container running and listening on port 8000.
 
--d: Runs the container in detached mode.
--p 8000:8000: Maps port 8000 inside the container to port 8000 on your host machine.
-
-## 3. Verify that the Docker container is running:
-
-You can check the running containers with:
+## 3. Access the FastAPI app:
+Once the container is running, your FastAPI app should be available at:
 
 ```bash
-docker ps
+http://127.0.0.1:8000/docs
 ```
+## 4. To stop the running Docker containers:
 
-## 4. To stop the running Docker container, use the following steps:
-
-Find the container ID:
-
-If you don't already know the container ID, you can find it by listing the running containers:
+If you need to stop the application and its containers, run:
 
 ```bash
-docker ps
+docker-compose down
 ```
 
-## 5. Stop the container:
+This will stop and remove all containers defined in the docker-compose.yml file.
 
-Replace <container_id> with the actual container ID you found:
+If you only want to stop the containers without removing them, use:
 
 ```bash
-docker stop <container_id>
+docker-compose stop
 ```
-This will stop the running container.
+
+## 5. If you want to rebuild and run the Docker containers again, you can use:
+
+```bash
+docker-compose up --build
+```
 

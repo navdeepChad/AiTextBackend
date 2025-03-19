@@ -53,6 +53,5 @@ def check_required_headers(request: Request, required_headers: list):
             BaseResponse(
                 api_response_code=ShipotleError.BADREQUEST,
                 message=f"Missing required headers: {missing_headers_str}",
-            ),
-            message=f"Missing required headers: {missing_headers_str}",
+            )
         )

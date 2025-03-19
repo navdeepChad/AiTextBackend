@@ -249,3 +249,34 @@
 2025-03-02 21:57:39,017 - auth_router - INFO - Logged out session: f05232c5-c430-4e33-957e-64134b66443e
 2025-03-08 18:30:27,449 - session_middleware - INFO - Session middleware invoked for path /docs
 2025-03-08 18:30:28,613 - session_middleware - INFO - Session middleware invoked for path /openapi.json
+2025-03-19 22:02:45,566 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-19 22:02:45,567 - auth_router - INFO - Login endpoint hit
+2025-03-19 22:02:45,754 - app.services.auth_service - INFO - JWT generated for user 'test_user'
+2025-03-19 22:02:45,754 - auth_router - INFO - User 'test_user' authenticated successfully using jwt
+2025-03-19 22:03:10,477 - session_middleware - INFO - Session middleware invoked for path /auth/login
+2025-03-19 22:03:10,478 - auth_router - INFO - Login endpoint hit
+2025-03-19 22:03:10,667 - session_service - INFO - Created session for user: 123, session_id: d0a73b24-9ae8-46f4-9f6b-fce54a72a274
+2025-03-19 22:03:10,667 - app.services.auth_service - INFO - Session created for user 'test_user'
+2025-03-19 22:03:10,667 - auth_router - INFO - User 'test_user' authenticated successfully using cookie
+2025-03-19 22:03:24,625 - session_middleware - INFO - Session middleware invoked for path /auth/protected
+2025-03-19 22:03:24,627 - auth_router - INFO - Protected endpoint hit
+2025-03-19 22:03:24,627 - session_service - INFO - Session retrieved for user: 123, session_id: d0a73b24-9ae8-46f4-9f6b-fce54a72a274
+2025-03-19 22:03:24,627 - auth_router - INFO - Session verified successfully for user: 123
+2025-03-19 22:03:46,288 - session_middleware - INFO - Session middleware invoked for path /auth/protected
+2025-03-19 22:03:46,290 - auth_router - INFO - Protected endpoint hit
+2025-03-19 22:03:46,290 - app.services.auth_service - INFO - Verifying JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiZmI2OTRmNmItOTQzZi00NDAyLTk4ODUtZWE4ODdlM2Y5MGI3IiwidXNlcl9pZCI6IjEyMyIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTE5IDE2OjMyOjQ1IiwiZXhwaXJ5X3RpbWUiOiIyMDI1LTAzLTE5IDE3OjMyOjQ1Iiwicm9sZSI6IkFkbWluIiwic3ViIjoiMTIzIiwiaWF0IjoxNzQyNDAxOTY1LCJleHAiOjE3NTUzNjE5NjV9.8fkSIoCh5wKH9MYALGTB6QeA-_bbbHHn7CZT_tnpJ-M
+2025-03-19 22:03:46,290 - app.services.jwt_handler - INFO - current iemes is  2025-03-19 16:33:46.290929
+2025-03-19 22:03:46,290 - app.services.jwt_handler - INFO - token exipre 2025-08-16 16:32:45+00:00
+2025-03-19 22:03:46,291 - app.services.auth_service - INFO - Decoded JWT: session_id='fb694f6b-943f-4402-9885-ea887e3f90b7' user_id='123' created_at=datetime.datetime(2025, 3, 19, 16, 32, 45, tzinfo=<UTC>) expiry_time=datetime.datetime(2025, 8, 16, 16, 32, 45, tzinfo=<UTC>) role='Admin'
+2025-03-19 22:03:46,291 - app.services.auth_service - INFO - JWT 'created_at': 2025-03-19 16:32:45+00:00
+2025-03-19 22:03:46,291 - app.services.auth_service - INFO - JWT 'expiry_time': 2025-08-16 16:32:45+00:00
+2025-03-19 22:03:46,291 - app.services.auth_service - INFO - User role: Admin
+2025-03-19 22:03:46,291 - app.services.auth_service - INFO - Required roles: ['Admin']
+2025-03-19 22:03:46,291 - auth_router - INFO - Session verified successfully for user: 123
+2025-03-19 22:03:55,400 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-19 22:03:55,402 - auth_router - INFO - Logout endpoint hit
+2025-03-19 22:03:55,402 - session_service - INFO - Deleted session for session_id: d0a73b24-9ae8-46f4-9f6b-fce54a72a274
+2025-03-19 22:03:55,402 - auth_router - INFO - Logged out session: d0a73b24-9ae8-46f4-9f6b-fce54a72a274
+2025-03-19 22:04:10,634 - session_middleware - INFO - Session middleware invoked for path /auth/logout
+2025-03-19 22:04:10,636 - auth_router - INFO - Logout endpoint hit
+2025-03-19 22:04:10,636 - auth_router - INFO - Logging out user with JWT token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiNDQ3YWY2MDUtNmI0NC00NTJjLTgyMGMtZTc4ZTMxMzMzM2RmIiwicHVibGljX3VzZXJuYW1lIjoidGVzdF91c2VyIiwiY3JlYXRlZF9hdCI6IjIwMjUtMDMtMDggMTk6MTU6NDMiLCJleHBpcnlfdGltZSI6IjIwMjUtMDMtMDggMjA6MTU6NDMiLCJyb2xlIjoiYWRtaW4iLCJzdWIiOiIxMjMiLCJleHAiOjE3NTQ0MjEzNDMsImlhdCI6MTc0MTQ2MTM0M30.cUze_cgMl1Esa69tSIzlvk2PGX4J86RCAjsr1_kuPqI

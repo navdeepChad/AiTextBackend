@@ -4,15 +4,20 @@ from app.services.jwt_handler import JWTHandler
 from fastapi import HTTPException
 import uuid
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+import os
 from passlib.context import CryptContext
 import pytz
+from dotenv import load_dotenv
 from app.error.py_error import BaseResponse, ShipotleError
 
 
 class AuthScheme:
     COOKIE = "cookie"
     JWT = "jwt"
+
+
+load_dotenv()
 
 
 logger = logging.getLogger(__name__)
@@ -41,23 +46,25 @@ class AuthenticationService:
                 )
             )
 
-        expiry_time = datetime.utcnow() + timedelta(hours=1)
+        expiry_time = (datetime.now(timezone.utc).replace(tzinfo=None)) + timedelta(
+            hours=1
+        )
         user_info = UserSessionInfo(
             session_id=str(uuid.uuid4()),
             role=user["role"],
             user_id=user["user_id"],
-            created_at=datetime.utcnow(),
+            created_at=datetime.now(timezone.utc).replace(tzinfo=None),
             expiry_time=expiry_time,
         )
 
         if auth_scheme == AuthScheme.COOKIE:
             try:
-                session_id = SessionService.create_session(user_info)
+                SessionService.create_session(user_info)
                 logger.info(f"Session created for user '{username}'")
                 return {
                     "auth_scheme": AuthScheme.COOKIE,
                     "success": True,
-                    "session_id": session_id,
+                    "session_id": "REDACTED",
                     "expires_in": expiry_time.replace(tzinfo=pytz.UTC),
                 }
             except Exception as e:
@@ -86,7 +93,9 @@ class AuthenticationService:
                     "auth_scheme": AuthScheme.JWT,
                     "success": True,
                     "token": token,
-                    "expires_in": 86400,  # currently set to 1 day
+                    "expires_in": int(
+                        os.getenv("JWT_EXPIRATION_TIME", 1)
+                    ),  # currently set to 1 day
                 }
             except Exception as e:
                 logger.error(f"Error generating JWT for user '{username}': {str(e)}")
@@ -127,11 +136,6 @@ class AuthenticationService:
                 logger.info(f"Decoded JWT: {session_info}")
 
                 if isinstance(session_info, UserSessionInfo):
-                    logger.info(f"JWT 'created_at': {session_info.created_at}")
-                    logger.info(f"JWT 'expiry_time': {session_info.expiry_time}")
-                    logger.info(f"User role: {session_info.role}")
-                    logger.info(f"Required roles: {required_roles}")
-
                     if required_roles and not self.has_required_roles(
                         session_info.role, required_roles
                     ):
@@ -161,6 +165,15 @@ class AuthenticationService:
         elif auth_scheme == AuthScheme.COOKIE and session_id:
             try:
                 session_info = SessionService.get_session(session_id)
+                if required_roles and not self.has_required_roles(
+                    session_info.role, required_roles
+                ):
+                    raise ShipotleError(
+                        BaseResponse(
+                            api_response_code=ShipotleError.AUTHORIZATION,
+                            message="You do not have access to this resource",
+                        )
+                    )
             except ShipotleError as e:
                 raise e
 
@@ -168,7 +181,7 @@ class AuthenticationService:
             raise ShipotleError(
                 BaseResponse(
                     api_response_code=ShipotleError.BADREQUEST,
-                    message="Invalid authentication scheme or missing token/session ID",
+                    message="Invalid authentication scheme or missing token or session cookie",
                 )
             )
 

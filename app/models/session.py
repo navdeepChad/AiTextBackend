@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from pydantic import BaseModel
 
 
@@ -10,4 +10,4 @@ class UserSessionInfo(BaseModel):
     role: str
 
     def is_expired(self) -> bool:
-        return datetime.utcnow() > self.expiry_time
+        return (datetime.now(timezone.utc).replace(tzinfo=None)) > self.expiry_time

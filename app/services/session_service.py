@@ -2,7 +2,7 @@ import logging
 from typing import Any, Dict
 from fastapi import HTTPException
 from app.models.session import UserSessionInfo
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from app.error.py_error import ShipotleError, BaseResponse
 
 # In-memory session store
@@ -15,7 +15,9 @@ class SessionService:
     @staticmethod
     def create_session(user_info: UserSessionInfo) -> str:
         try:
-            user_info.expiry_time = datetime.utcnow() + timedelta(hours=1)
+            user_info.expiry_time = (
+                datetime.now(timezone.utc).replace(tzinfo=None)
+            ) + timedelta(hours=1)
             session_store[user_info.session_id] = user_info.dict()
             logger.info(
                 f"Created session for user: {user_info.user_id}, session_id: {user_info.session_id}"

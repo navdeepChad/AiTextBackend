@@ -1,5 +1,5 @@
 import jwt
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from fastapi import HTTPException
 from typing import Dict, Any
 from dotenv import load_dotenv
@@ -22,7 +22,7 @@ JWT_EXPIRATION_TIME = int(os.getenv("JWT_EXPIRATION_TIME", 1))
 class JWTHandler:
     @staticmethod
     def generate_jwt(payload: Dict[str, Any]) -> str:
-        now = datetime.utcnow().replace(tzinfo=pytz.UTC)
+        now = datetime.now(timezone.utc)
         payload["iat"] = now
         payload["exp"] = now + timedelta(hours=JWT_EXPIRATION_TIME)
 
@@ -63,9 +63,6 @@ class JWTHandler:
                 expiry_time=datetime.fromtimestamp(payload["exp"], tz=pytz.UTC),
                 role=payload.get("role"),
             )
-
-            logger.info(f"current iemes is  {datetime.utcnow()}")
-            logger.info(f"token exipre {session_info.expiry_time}")
 
             return session_info
 

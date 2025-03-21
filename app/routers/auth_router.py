@@ -6,7 +6,8 @@ from app.services.session_service import SessionService
 from app.error.py_error import BaseResponse, ShipotleError
 from app.middleware.session_middleware import check_required_headers
 from typing import Dict, Any
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from app.models.role import Role
 
 router = APIRouter()
 logger = logging.getLogger("auth_router")
@@ -31,7 +32,9 @@ def login(
         )
 
         if x_authscheme == AuthScheme.COOKIE:
-            expires = datetime.utcnow() + timedelta(hours=1)
+            expires = (datetime.now(timezone.utc).replace(tzinfo=None)) + timedelta(
+                hours=1
+            )
             response.set_cookie(
                 key="session_id",
                 value=auth_response["session_id"],
@@ -49,7 +52,6 @@ def login(
                 message="Authentication failed",
             )
         )
-
     return auth_response
 
 
@@ -60,7 +62,7 @@ async def protected_route(request: Request) -> Dict[str, str]:
     check_required_headers(request, ["x-authscheme"])
     x_authscheme = request.headers.get("x-authscheme")
 
-    required_roles = ["Admin"]
+    required_roles = [role.value for role in [Role.UNKNOWN, Role.ADMIN]]
 
     try:
         token = (

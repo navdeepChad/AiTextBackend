@@ -59,12 +59,12 @@ class AuthenticationService:
 
         if auth_scheme == AuthScheme.COOKIE:
             try:
-                SessionService.create_session(user_info)
+                session_id = SessionService.create_session(user_info)
                 logger.info(f"Session created for user '{username}'")
                 return {
                     "auth_scheme": AuthScheme.COOKIE,
                     "success": True,
-                    "session_id": "REDACTED",
+                    "session_id": session_id,
                     "expires_in": expiry_time.replace(tzinfo=pytz.UTC),
                 }
             except Exception as e:

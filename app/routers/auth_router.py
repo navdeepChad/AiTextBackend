@@ -42,6 +42,7 @@ def login(
                 secure=False,
                 expires=expires.strftime("%a, %d %b %Y %H:%M:%S GMT"),
             )
+            auth_response.pop("session_id")
     except Exception as e:
         logger.error(
             f"Authentication failed for user '{login_data.username}': {str(e)}"

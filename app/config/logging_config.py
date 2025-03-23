@@ -11,16 +11,11 @@ LOGGING_CONFIG = {
         "console": {
             "class": "logging.StreamHandler",
             "formatter": "default",
-        },
-        "file": {
-            "class": "logging.FileHandler",
-            "formatter": "default",
-            "filename": "app.log",
-        },
+        }
     },
     "root": {
         "level": "INFO",
-        "handlers": ["console", "file"],
+        "handlers": ["console"],
     },
 }
 logging.config.dictConfig(LOGGING_CONFIG)

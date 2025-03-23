@@ -9,5 +9,9 @@ class JWTToken(BaseModel):
 class AuthResponse(BaseModel):
     auth_scheme: str
     success: bool
-    session_id: Optional[str] = None
     token: Optional[str] = None
+
+
+class LoginRequest(BaseModel):
+    username: str
+    password: str
